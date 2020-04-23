@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+</head>
+<body>
+    <header>
+        <h1>Plan your journey</h1>
+    </header>
+    <section>
+        <div class="head">
+            <h2>your journey begins here...</h2>
+        </div>
+        <div class="inputDiv">
+            <div class="tripInput">
+                <label for="city">Destination City</label>
+                <input type="text" id="city" placeholder="Enter city name..." required>
+            </div>
+            <div class="tripInput">
+                <label >Arrival Date</label>
+                <input type="date" id="startDate" required>
+            </div>
+            <div class="tripInput">
+                <label >Departure Date</label>
+                <input type="date" id="endDate" required>
+            </div>
+        </div>
+        <button id="generate" type="submit">get your trip</button>
+        <div class="result" id="result">
+            <div class="result_head">
+                <h2>get ready for your journey in <span id="sd"></span> days</h2>
+            </div>
+            <div class="result_data">
+                <div class="result_image" id="result_image"></div>
+                <div class="result_datas">
+                    <h2>your journey in <span id="cityOutput"></span> will be for <span id="vd"></span> days.</h2>
+                    <div class="result_datas_div">
+                        <strong>Typical Weather: <span id="weather"></span></strong>
+                    </div>
+                    <div class="result_datas_div">
+                        <strong>Latitude: <span id="lat"></span></strong>
+                    </div>
+                    <div class="result_datas_div">
+                        <strong>Logitude: <span id="long"></span> </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>@2020 travel planner</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    transition: ease-in-out .3s;
+}
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+    /*background-size: cover;
+    background-repeat: no-repeat; 
+    background-image: url(https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/04/Intrepid-Travel-South-Africa_Drakensberg_Hiking-Tugela-Waterfall__Ryan-Bolton-3K5A2036.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+header, footer {
+    height: 10vh;
+    background-color: teal;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+section {
+    min-height: 80vh;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+}
+.head, .result_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    height: 8vh;
+}
+.inputDiv {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.tripInput {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    width: 100%;
+}
+.tripInput:last-child {
+    margin-right: 0px;
+}
+.tripInput label {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.tripInput input {
+    padding: 10px 20px;
+    outline: none;
+    letter-spacing: 1.3px;
+    height: 3vh;
+    border: 2px solid transparent;
+    font-size: 15px;
+}
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.tripInput input:focus {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
+}
+button {
+    padding: 1.5vh;
+    margin: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    background-color: antiquewhite;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+button:hover {
+    background-color: teal;
+    color: #ffffff;
+}
+
+.result {
+    padding: 10px;
+    display: none;
+}
+.result_head {
+    height: auto;
+    margin-bottom: 10px;
+}
+.result_data {
+    display: flex;
+}
+.result_image {
+    width: 65%;
+}
+.result_image img {
+    width: 100%;
+    height: auto;
+}
+.result_datas {
+    padding-left: 10px;
+}
+.result_datas h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+}
+.result_datas_div {
+    padding: 5px 0px;
+}
+@media(max-width: 700px) {
+    .inputDiv {
+        display: flex;
+        flex-direction: column;
+    }
+    .tripInput {
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .result_data {
+        flex-direction: column;
+    }
+    .result_image {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
